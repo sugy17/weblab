@@ -1,0 +1,10 @@
+details{display:block;font-size: 30px; font-weight: 700;padding-bottom: 10px;}
+SName{display:block;}
+usn{color: red;display: block;}
+name{color: teal;display: block;}
+college{color: deeppink;display: block;}
+year_of_joining{color:green;display: block;}
+branch{color: silver;display: block}
+email{color: gold;display: block;}
+student{border:2px dotted red;display:inline-block;}
+studentlist{font-size: 30px;}

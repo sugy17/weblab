@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <style>
+        table {
+            background-color: rgb(59, 209, 0);
+            height: 500px;
+            width: 400px;
+        }
+
+        input[type=text] {
+            height: 100%;
+            width: 98%;
+            font-size: 25px;
+            text-align: right;
+        }
+
+        input[type=button] {
+            height: 100%;
+            width: 100%;
+            font-size: 25px;
+            background-color: rgb(238, 238, 238);
+            font-weight: 550;
+        }
+    </style>
+</head>
+
+<body style="padding-top: 5%;">
+    <center>
+        <b style="font-size: 35px;">Name:SUGYAN ANAND USN:1CR17CS154</b>
+        <table border="5" onclick="handle(event)">
+            <tr>
+                <th colspan="4" style="font-size: 70px;">Calculator</th>
+            </tr>
+            <tr>
+                <td colspan="4"><input type="text" id="display" value="0" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="C" /></td>
+                <td><input type="button" value="/" /></td>
+                <td><input type="button" value="*" /></td>
+                <td><input type="button" value="-" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" /></td>
+                <td><input type="button" value="8" /></td>
+                <td><input type="button" value="9" /></td>
+                <td rowspan="2"><input type="button" value="+" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" /></td>
+                <td><input type="button" value="5" /></td>
+                <td><input type="button" value="6" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" /></td>
+                <td><input type="button" value="2" /></td>
+                <td><input type="button" value="3" /></td>
+                <td rowspan="2"><input type="button" value="=" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0" /></td>
+                <td><input type="button" value="." /></td>
+                <td><input type="button" value="%" /></td>
+            </tr>
+        </table>
+    </center>
+    <script>
+        var clear = true;
+        function handle(event) {
+            if (event.target.type != "button")
+                return;
+            var display = document.getElementById("display");
+            val = event.target.value;
+            if (clear && val != "=")
+                display.value = "";
+            if (val == "=") {
+                try { display.value = eval(display.value); }
+                catch (err) { display.value = "Invalid expression"; }
+                if (display.value == "undefined") display.value = 0;
+                clear = true;
+            }
+            else if (val == "C") {
+                display.value = 0;
+                clear = true;
+            }
+            else if (val) {
+                display.value += val;
+                clear = false;
+            }
+        }
+    </script>
+</body>
+
+</html>

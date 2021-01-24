@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+	function revInt(num){
+        rev = 0;
+    	while(num > 0){
+            rem=num%10;
+            rev=rev*10+rem;
+            num=Math.floor(num/10);
+        }
+        document.write("revserse of number is "+ rev);
+    }
+    
+    function findVowel(str){
+    	pos = str.search(/[aeiouAEIOU]/);
+       	document.write(pos!=-1?"The First Occurence Of Vowel is at : "+ (pos+1):"no vowel");
+    }
+  inp = prompt("Enter The Query");
+	/^\d+$/.test(inp)? revInt(parseInt(inp)):findVowel(inp);
+</script>
+</body>
+</html> 

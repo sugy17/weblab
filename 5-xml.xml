@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?xml-stylesheet type="text/css" href="5-xml.css"?>
+<studentlist>
+    <details>
+        <SName>SUGYAN ANAND</SName>
+        <Susn>1CR17CS154</Susn>
+    </details>
+	<student>
+		<usn>1cr17cs154</usn>
+		<name>SUGYAN ANAND</name>
+		<college> cmrit</college>
+		<year_of_joining>2017</year_of_joining>
+		<branch>computer science</branch>
+		<email>sand17cs@cmrit.ac.in</email>
+	</student>
+	<student>
+		<usn>1cr17cs188</usn>
+		<name>rahul raj sahoo</name>
+		<college> cmrit</college>
+		<year_of_joining>2017</year_of_joining>
+		<branch>computer science</branch>
+		<email>rash@cmrit.ac.in</email>
+	</student>
+	<student>
+		<usn>1cr17cs187</usn>
+		<name>rahul singh</name>
+		<college> cmrit</college>
+		<year_of_joining>2017</year_of_joining>
+		<branch>computer science</branch>
+		<email>Rksh17cs@cmrit.ac.in</email>
+	</student>
+</studentlist>
